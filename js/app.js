@@ -1,59 +1,25 @@
 function email_test(input) {
 	return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
 }
-// faq__item_close
+//=======close_spoller=================================================================================================================================================
+let itemCloses = document.querySelectorAll(".faq__item_close");
+for (let index = 0; index < itemCloses.length; index++) {
+	let itemClose = itemCloses[index];
+	let itemsTitles = document.querySelectorAll(".faq__item_title");
+	let itemsBlocks = document.querySelectorAll(".faq__item_block");
+	for (let index = 0; index < itemsTitles.length; index++) {
+		itemClose.addEventListener("click", function (e) {
+			for (let index = 0; index < itemsTitles.length; index++) {
+				let itemsTitle = itemsTitles[index];
+				itemsTitle.classList.remove('_active');
+                _slideUp(itemsBlocks[index]);
+			}
+			e.preventDefault();
+		});
+	}
+}
+//========================================================================================================================================================
 
-// let apps =document.querySelector('.faq__item_close');
-// let itemTitle = document.querySelector('.faq__item_title');
-// let itemBlock = document.querySelector('.faq__item_block');
-// function itemClose () { 
-//         apps.addEventListener("click", function(e) {
-//         itemTitle.classList.remove("_active");
-// 	    itemBlock.classList.remove("_active");
-//     });
-//  }
-//  console.log('itemClose');
-
-// const closeBtn = document.querySelectorAll('[data-modal]')
-
-
-// var block = document.querySelector('#open1');
-// var button= document.querySelector('#close1');
-// button.onclick = function() {
-//   if (block.style.display === 'none') {
-//     block.style.display = 'block';
-//   } else {
-//     block.style.display = 'none';
-//   };
-//   return;
-// };
-
-
-// let closeClos = document.querySelector('.faq__item_close')
-// closeClos.addEventListener("click", function(e) {
-//     document.querySelector('.faq__item_block').style.display = "none"
-// });
-// // console.log(closeClos)
-
-// let tabs = document.querySelectorAll("._tabs");
-// for (let index = 0; index < tabs.length; index++) {
-// 	let tab = tabs[index];
-// 	let tabs_items = tab.querySelectorAll("._tabs-item");
-// 	let tabs_blocks = tab.querySelectorAll("._tabs-block");
-// 	for (let index = 0; index < tabs_items.length; index++) {
-// 		let tabs_item = tabs_items[index];
-// 		tabs_item.addEventListener("click", function (e) {
-// 			for (let index = 0; index < tabs_items.length; index++) {
-// 				let tabs_item = tabs_items[index];
-// 				tabs_item.classList.remove('_active');
-// 				tabs_blocks[index].classList.remove('_active');
-// 			}
-// 			tabs_item.classList.add('_active');
-// 			tabs_blocks[index].classList.add('_active');
-// 			e.preventDefault();
-// 		});
-// 	}
-// }
 var ua = window.navigator.userAgent;
 var msie = ua.indexOf("MSIE ");
 var isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
