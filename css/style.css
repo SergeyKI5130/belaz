@@ -1690,6 +1690,9 @@ body.ie ._ibg img {
 }
 
 .faq__item_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 16px;
   line-height: 118.75%;
   font-weight: 700;
@@ -1698,6 +1701,7 @@ body.ie ._ibg img {
 }
 
 .faq__item_title::before {
+  display: block;
   padding: 0px 15px 0px 0px;
   counter-increment: section;
   content: " " counter(section) ". ";
@@ -1766,7 +1770,7 @@ body.ie ._ibg img {
 }
 
 .faq__imag::after {
-  content: 'Эдуард Викторович, Директор ООО "Eddie`s-Car"';
+  content: 'Андрей Викторович, Директор ООО "Eddie`s-Car"';
   position: absolute;
   padding: 12px 19px 12px 19px;
   max-width: 230px;
