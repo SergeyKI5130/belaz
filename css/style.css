@@ -88,6 +88,7 @@
 
 ._icon-event:before {
   content: "\e905";
+  color: #000;
 }
 
 ._icon-listitem:before {
@@ -120,6 +121,7 @@
 
 ._icon-piggy:before {
   content: "\e90b";
+  color: #000;
 }
 
 ._icon-reload:before {
@@ -179,6 +181,7 @@
 
 ._icon-truckB:before {
   content: "\e915";
+  color: #000;
 }
 
 * {
@@ -311,8 +314,8 @@ body._lock {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  width: 370px;
-  height: 80px;
+  width: 300px;
+  height: 60px;
   background-color: #1866af;
   font-size: 17px;
   line-height: 117.64706%;
@@ -1101,7 +1104,7 @@ body.ie ._ibg img {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  background-color: #fff;
+  background-color: #0d3452;
   padding: 50px;
   width: 100%;
   max-width: 800px;
@@ -1111,11 +1114,36 @@ body.ie ._ibg img {
   width: 15px;
   height: 15px;
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 11px;
+  right: 11px;
   cursor: pointer;
   z-index: 30;
   background: url("../img/icons/close.svg") 0 0 no-repeat;
+}
+
+.popup__title {
+  text-align: center;
+  margin: 0px 0px 25px 0px;
+  color: #fff;
+}
+
+.popup__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popup__form input {
+  margin: 0px 30px 0px 0px;
+  width: 300px;
+  height: 60px;
+  background-color: #f2f2f2;
 }
 
 .header {
@@ -1348,6 +1376,7 @@ body.ie ._ibg img {
 }
 
 .promo__item {
+  color: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2186,6 +2215,10 @@ body.ie ._ibg img {
     text-decoration: underline;
   }
 
+  .promo__item:hover {
+    color: rgba(15, 61, 0, 0.548);
+  }
+
   .protect__info:hover {
     color: #579eff;
   }
@@ -2407,6 +2440,17 @@ body.ie ._ibg img {
     padding: 0 10px;
   }
 
+  .popup__form input {
+    margin: 0px 0px 30px 0px;
+  }
+
+  .popup__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
   .header {
     padding: 30px 0px 10px 0px;
   }
@@ -2611,6 +2655,14 @@ body.ie ._ibg img {
 }
 
 @media (max-width: 479.98px) {
+  .popup__form input {
+    width: 280px;
+  }
+
+  .popup__btn {
+    width: 280px;
+  }
+
   .footer__content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
