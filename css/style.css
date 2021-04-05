@@ -1694,7 +1694,7 @@ body.ie ._ibg img {
   display: -ms-flexbox;
   display: flex;
   font-size: 16px;
-  line-height: 25px;
+  line-height: 118.75%;
   font-weight: 700;
   color: #fff;
   overflow: hidden;
@@ -2377,6 +2377,15 @@ body.ie ._ibg img {
             flex: 1 1 100%;
   }
 
+  .faq__item {
+    max-width: 100%;
+    margin: 0px 20px 55px 0px;
+  }
+
+  .faq__item:last-child {
+    margin: 0px 20px 0px 0px;
+  }
+
   .faq__imag {
     margin: 0px 0px 30px 0px;
   }
@@ -2659,6 +2668,10 @@ body.ie ._ibg img {
 }
 
 @media (max-width: 479.98px) {
+  .popup__body {
+    padding: 50px 10px;
+  }
+
   .popup__form input {
     width: 280px;
   }
